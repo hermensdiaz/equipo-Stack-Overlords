@@ -14,3 +14,5 @@ Cada integrante crea su archivo en `integrantes/[tu-nombre].md` con:
 - **Carrera:**
 - **Una frase:**
 - **Foto:** `![foto](https://github.com/tu-usuario.png)`
+
+Estoy haciendo un cambio y nadie se va a enterar. Atte. Hermen. :D
