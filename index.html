@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack Overlords — Equipo</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+  }
+  header { text-align: center; margin-bottom: 3rem; }
+  .logo {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), #d2a8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tagline { color: var(--muted); margin-top: .5rem; font-size: 1.1rem; }
+  .badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .35rem .9rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--green);
+    font-size: .85rem;
+    background: rgba(63,185,80,.08);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 960px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform .2s, border-color .2s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .card img {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--border);
+    margin-bottom: 1rem;
+    background: var(--bg);
+  }
+  .card h2 { font-size: 1.3rem; margin-bottom: .25rem; }
+  .card .career { color: var(--accent); font-size: .9rem; margin-bottom: 1rem; }
+  .card blockquote {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    border-left: 3px solid var(--border);
+    padding-left: .75rem;
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+  .ritual { text-align: left; }
+  .ritual h3 {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin-bottom: .5rem;
+  }
+  .ritual ol { list-style: none; }
+  .ritual li {
+    font-size: .85rem;
+    padding: .3rem 0;
+    color: var(--text);
+  }
+  .ritual li::before { content: "▸ "; color: var(--green); }
+  .card a.gh {
+    display: inline-block;
+    margin-top: 1.25rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: .9rem;
+  }
+  .card a.gh:hover { text-decoration: underline; }
+  footer {
+    margin-top: 3.5rem;
+    color: var(--muted);
+    font-size: .85rem;
+    text-align: center;
+  }
+  footer code {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .15rem .45rem;
+    color: var(--green);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">stack-overlords</h1>
+    <p class="tagline">Equipo de la práctica de terminal — Bloque 2 · EarlyCareerFlow</p>
+    <span class="badge">● 3 integrantes · Ingeniería de Software</span>
+  </header>
+
+  <main class="grid">
+    <article class="card">
+      <img src="https://github.com/hermensdiaz.png" alt="Foto de Hermen">
+      <h2>Hermen Steven</h2>
+      <p class="career">Ingeniería de Software</p>
+      <blockquote>"El camino de mil millas comienza con un solo paso"</blockquote>
+      <div class="ritual">
+        <h3>Mi ritual de trabajo</h3>
+        <ol>
+          <li>Antes: planificar</li>
+          <li>Durante: procesar</li>
+          <li>Después: verificar</li>
+        </ol>
+      </div>
+      <a class="gh" href="https://github.com/hermensdiaz">@hermensdiaz</a>
+    </article>
+
+    <article class="card">
+      <img src="https://github.com/erickbolanosg.png" alt="Foto de Erick">
+      <h2>Erick Bolaños</h2>
+      <p class="career">Ingeniería de Software</p>
+      <blockquote>"Primero gateo antes de correr"</blockquote>
+      <div class="ritual">
+        <h3>Mi ritual de trabajo</h3>
+        <ol>
+          <li>Antes: —</li>
+          <li>Durante: —</li>
+          <li>Después: —</li>
+        </ol>
+      </div>
+      <a class="gh" href="https://github.com/erickbolanosg">@erickbolanosg</a>
+    </article>
+
+    <article class="card">
+      <img src="https://github.com/sofi-0023.png" alt="Foto de Sofía">
+      <h2>Sofía Barreiro</h2>
+      <p class="career">Ingeniería de Software</p>
+      <blockquote>"Nah id win" — Gojo</blockquote>
+      <div class="ritual">
+        <h3>Mi ritual de trabajo</h3>
+        <ol>
+          <li>Antes: planificar</li>
+          <li>Durante: procesar</li>
+          <li>Después: verificar y validar</li>
+        </ol>
+      </div>
+      <a class="gh" href="https://github.com/sofi-0023">@sofi-0023</a>
+    </article>
+  </main>
+
+  <footer>
+    Trabajamos con flujo de ramas · PRs revisados · <code>squash and merge</code>
+  </footer>
+</body>
+</html>
