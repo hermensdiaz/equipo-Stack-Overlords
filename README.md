@@ -1,10 +1,13 @@
 # Bienvenidos Monkeycoder Steve, Erick y Sofía
-# Equipo [nombre]
+# Equipo stack-overlords
 
 ## Integrantes
 
 | Nombre | Carrera | Usuario de GitHub |
 |---|---|---|
+|Sofía| LIS | sofi-0023 |
+| hermen | LIS | hermensdiaz | 
+| Erick | LIS | erickbolanosg |
 
 ## Formato del perfil
 
