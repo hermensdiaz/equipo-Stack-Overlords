@@ -1,6 +1,6 @@
 # Estrategias de trabajo colaborativo con Git
 
-## 1. Flujos de trabajo
+## 2. Investigación de estrategias de trabajo colaborativo
 
 ### Flujo de trabajo con ramas
 
@@ -27,9 +27,7 @@ En lugar de compartir un único repositorio central con permisos de escritura pa
 - Los cambios se trabajan de forma local.
 - Se proponen al repositorio original mediante un PR.
 
----
-
-## 2. Integración de cambios
+### Integración de cambios
 
 | Método | Qué hace | Resultado en el historial |
 |---|---|---|
@@ -45,17 +43,15 @@ En lugar de compartir un único repositorio central con permisos de escritura pa
 
 **Justificación:** cada integrante realiza su propio trabajo en su propia rama y en sus propios archivos. De esta forma se evita que todos trabajen de forma asíncrona sobre un único archivo, lo que reduce los conflictos al hacer merge.
 
----
+### Políticas concretas
 
-## 4. Políticas concretas
-
-### Nombres de ramas
+#### Nombres de ramas
 
 ```text
 feature/[#]-[acción]-[nombre]
 ```
 
-### Mensajes de commit
+#### Mensajes de commit
 
 | Prefijo | Uso |
 |---|---|
@@ -63,27 +59,51 @@ feature/[#]-[acción]-[nombre]
 | `feat` | Cambios en acciones o nuevas funcionalidades |
 | `fix` | Cuando se arregla algo dentro del repositorio |
 
-### Requisitos para integrar un PR
+#### Requisitos para integrar un PR
 
 - Alguien del equipo debe revisarlo.
 - El robot realiza la verificación automática.
 - El revisor redacta una descripción de los cambios realizados.
 
-### Método de integración
+#### Método de integración
 
 Mediante PR. Se revisa y, si todo está bien, se hace **squash and merge**.
 
-### Ramas protegidas y reglas
+#### Ramas protegidas y reglas
 
 - Ramas protegidas: `main` y `docs` (documentación).
 - Los cambios en ellas se hacen **únicamente mediante PR**.
 
-### Qué revisaría un robot
+#### Qué revisaría un robot
 
 Revisaría los PR (verificación automática antes de la revisión humana).
 
-### Resolución de conflictos y deshacer errores
+#### Resolución de conflictos y deshacer errores
 
 - Los conflictos se resuelven en equipo.
 - Se revisa qué causó el error.
 - Se corrige lo que sea necesario.
+
+---
+
+## Por qué otras estrategias no eran la mejor opción
+
+### 1. Trabajo directo en una sola rama (Trunk-Based sin ramas)
+
+- **El problema:** todos los integrantes hacen commit y push directamente sobre `main`.
+- **Por qué se descartó:** en un equipo en desarrollo, esto garantiza colisiones constantes. Si dos personas editan al mismo tiempo, la terminal se bloquea pidiendo resolver conflictos manualmente antes de subir. Además, un error cometido por una sola persona rompe el trabajo de todo el equipo de inmediato.
+
+### 2. Todos trabajando en el mismo archivo
+
+- **El problema:** aunque se utilicen ramas separadas, si todos editan el mismo archivo al mismo tiempo, el choque es inevitable.
+- **Por qué se descartó:** al momento de hacer el merge, Git no sabrá qué líneas conservar y cuáles descartar. Esto obliga al equipo a resolver conflictos complejos de forma manual, lo que genera pérdida de tiempo, riesgo de borrar el trabajo de un compañero y frustración innecesaria.
+
+### 3. GitFlow tradicional (múltiples ramas permanentes: `develop`, `release`, `hotfix`, `main`)
+
+- **El problema:** es un modelo con demasiadas ramas de larga duración y reglas de integración estrictas.
+- **Por qué se descartó:** para el tamaño y la velocidad de este proyecto, GitFlow añade una capa de burocracia excesiva. Pasar un cambio por `feature` → `develop` → `release` → `main` duplica el trabajo administrativo sin aportar un beneficio real en esta etapa.
+
+### 4. Flujo basado en forks (Forking Workflow)
+
+- **El problema:** cada integrante clona el proyecto a su propia cuenta personal de GitHub y envía PRs desde ahí hacia el repositorio central.
+- **Por qué se descartó:** es la norma en proyectos de código abierto con miles de extraños, pero para un equipo interno entorpece la colaboración. Añade pasos extra para mantener los repositorios personales sincronizados con el origen y dificulta la visibilidad inmediata del trabajo de los compañeros.
