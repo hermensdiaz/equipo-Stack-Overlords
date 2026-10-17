@@ -6,3 +6,9 @@
 - **Foto:**
 
 ![foto](https://github.com/erickbolanosg.png)
+
+## Mi ritual de trabajo
+
+1. **Antes:** 
+2. **Durante:** 
+3. **Después:** 
