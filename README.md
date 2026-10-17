@@ -1,3 +1,4 @@
+# Bienvenidos Monkeycoder Steve, Erick y Sofía
 # Equipo [nombre]
 
 ## Integrantes
